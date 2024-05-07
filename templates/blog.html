@@ -287,7 +287,7 @@
 .menu {
     display: block;
     background-color: rgb(189, 189, 189);
-    padding: 10px 0px 10px 0px;
+    padding: 10px;
   }
   
   .menu li {
@@ -313,6 +313,7 @@
   
 .tab-content {
     display: none;
+    padding: 10px;
 }
   
 :target {
@@ -353,7 +354,7 @@ tab.classList.add('active');
         <div class="container">
     <div class="header__flex">
     
-      <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-">
+      <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
       <nav class="idial">
         <ul>
           <li><a href="/">Главная</a></li>

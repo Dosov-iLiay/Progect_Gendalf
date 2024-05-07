@@ -291,7 +291,7 @@ ul{
                 <div class="container">
             <div class="header__flex">
             
-              <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-">
+              <a href="/"><img src="{{ url_for('static', filename='images/logo.svg') }}" alt="-_-"></a>
               <nav class="idial">
                 <ul>
                   <li><a href="/">Главная</a></li>
@@ -315,12 +315,14 @@ ul{
     <div class="restor">
         <div class="container">
             <p>Рестораны в Москве</p>
-            <div class="restor__price"><a href="/tovar">
+            <div class="restor__price">
+              <a class="tovar" href="/tovar">
                 <div class="restor__price__elem">
                   <img src="{{ url_for('static', filename='images/price/1.png') }}" alt="-_-">
                   <p>Макдоналдс - Газетный</p>
                   <p>&#8381;&#8381; &#183; Бургеры</p>
-                  <p>25 - 35 мин</p></a>
+                  <p>25 - 35 мин</p>
+              </a>
                 </div>
                 <div class="restor__price__elem">
                     <img src="{{ url_for('static', filename='images/price/2.png') }}" alt="-_-">
