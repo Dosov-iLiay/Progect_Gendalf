@@ -28,10 +28,15 @@ def show():
     return render_template('show.html', message=file_name)
 
 @app.route("/otziv")
-def kaif():
+def otziv():
     files_paths = os.listdir('./files')
     files_paths.remove('deleted_files')
-    return render_template('otziv.html', list_files=files_paths)
+    list_files = []
+    for file_name in files_paths:
+        file_content = open(f'./files/{file_name}', 'r').readlines()
+        list_files.append([file_name, file_content])
+    return render_template('otziv.html', list_files=list_files)
+
 
 
 @app.route("/create")

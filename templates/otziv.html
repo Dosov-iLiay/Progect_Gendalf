@@ -331,13 +331,12 @@ a:hover {
     </div>
 </div>
 </header>
-    {% for file_name in list_files %}
-        <div class="card">
-            <!-- <h1 class="">{{ file_name }}</h1> -->
-            <a class="zag" href="/file/{{ file_name }}">{{ file_name }}</a>
-            <!-- <a  href="/delete/{{ file_name }}">Delete</a> -->
-        </div>
-    {% endfor %}
+{% for file_name, file_content in list_files %}
+<div class="card">
+  <h3 class="review-title">{{ file_name }}</h3>
+  <p class="review-text">{% for line in file_content %}{{ line }}{% endfor %}</p>
+</div>
+{% endfor %}
 <hr>
 <a href="/create">Добавьте отзыв!</a>
 </body>
